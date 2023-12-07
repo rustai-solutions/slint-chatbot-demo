@@ -1,38 +1,35 @@
-# Slint Rust Template
+# Slint Chatbot Demo
 
-A template for a Rust application that's using [Slint](https://slint-ui.com) for the user interface.
+make sure you have downloaded `openchat_3.5.Q4_K_M.gguf` and `tokenizer.json` by:
 
-## About
+```
+HF_HUB_ENABLE_HF_TRANSFER=1 HF_ENDPOINT=https://hf-mirror.com huggingface-cli download TheBloke/openchat_3.5-GGUF openchat_3.5.Q4_K_M.gguf
+HF_HUB_ENABLE_HF_TRANSFER=1 HF_ENDPOINT=https://hf-mirror.com huggingface-cli download openchat/openchat_3.5 tokenizer.json
+```
+The downloads locate at `~/.cache/huggingface/hub/`.
 
-This template helps you get started developing a Rust application with Slint as toolkit
-for the user interface. It demonstrates the integration between the `.slint` UI markup and
-Rust code, how to trigger react to callbacks, get and set properties and use basic widgets.
+Copy them to the root of the current project directory, like the following:
 
-## Usage
+```
+$ ls -lh
+total 12G
+-rw-r--r-- 1 daoga 197609   71 12月  6 12:34 build.rs
+-rw-r--r-- 1 daoga 197609 141K 12月  7 17:37 Cargo.lock
+-rw-r--r-- 1 daoga 197609  436 12月  7 17:36 Cargo.toml
+-rw-r--r-- 1 daoga 197609 1.1K 12月  6 12:34 LICENSE
+-rw-r--r-- 1 daoga 197609 4.1G 12月  7 15:31 openchat_3.5.Q4_K_M.gguf
+-rw-r--r-- 1 daoga 197609 7.2G 12月  7 15:53 openchat_3.5.Q8_0.gguf
+-rw-r--r-- 1 daoga 197609  468 12月  7 17:39 README.md
+drwxr-xr-x 1 daoga 197609    0 12月  7 15:07 src/
+drwxr-xr-x 1 daoga 197609    0 12月  6 16:49 target/
+-rw-r--r-- 1 daoga 197609 1.8M 12月  7 15:30 tokenizer.json
+drwxr-xr-x 1 daoga 197609    0 12月  6 12:34 ui/
+```
 
-1. Install Rust by following the [Rust Getting Started Guide](https://www.rust-lang.org/learn/get-started).
-   Once this is done, you should have the ```rustc``` compiler and the ```cargo``` build system installed in your path.
-2. Install [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
-    ```
-    cargo install cargo-generate
-    ```
-3. Set up a sample project with this template
-    ```
-    cargo generate --git https://github.com/slint-ui/slint-rust-template --name my-project
-    cd my-project
-    ```
-3. Build with cargo
-    ```
-    cargo build
-    ```
-4. Run the application binary
-     ```
-     cargo run
-     ```
+and then 
 
-We recommend using an IDE for development, along with our [LSP-based IDE integration for `.slint` files](https://github.com/slint-ui/slint/blob/master/tools/lsp/README.md). You can also load this project directly in [Visual Studio Code](https://code.visualstudio.com) and install our [Slint extension](https://marketplace.visualstudio.com/items?itemName=Slint.slint).
+```
+cargo run --release
+```
 
-## Next Steps
-
-We hope that this template helps you get started and you enjoy exploring making user interfaces with Slint. To learn more
-about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint-ui.com/docs/rust/slint/).
+You will look at a GUI app poped up, good luck!

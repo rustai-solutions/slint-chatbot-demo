@@ -2947,20 +2947,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "my-project"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "candle-core",
- "candle-transformers",
- "clap",
- "hf-hub",
- "slint",
- "slint-build",
- "tokenizers",
-]
-
-[[package]]
 name = "nanorand"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4182,6 +4168,20 @@ dependencies = [
  "spin_on",
  "thiserror",
  "toml_edit 0.21.0",
+]
+
+[[package]]
+name = "slint-chatbot-demo"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "candle-core",
+ "candle-transformers",
+ "clap",
+ "hf-hub",
+ "slint",
+ "slint-build",
+ "tokenizers",
 ]
 
 [[package]]
