@@ -1,6 +1,12 @@
 # Slint Chatbot Demo
 
-make sure you have downloaded `openchat_3.5.Q4_K_M.gguf` and `tokenizer.json` by:
+This is a demo of Rust + Slint + Candle + OpenChat LLM, it looks like this:
+
+![](./assets/screenshot.png)
+
+## Do it by yourself
+
+Make sure you have downloaded `openchat_3.5.Q4_K_M.gguf` and `tokenizer.json` by:
 
 ```
 HF_HUB_ENABLE_HF_TRANSFER=1 HF_ENDPOINT=https://hf-mirror.com huggingface-cli download TheBloke/openchat_3.5-GGUF openchat_3.5.Q4_K_M.gguf
