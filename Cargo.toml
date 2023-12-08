@@ -16,6 +16,5 @@ clap = "4.4.10"
 hf-hub = "0.3.2"
 tokenizers = "0.15.0"
 
-
 [build-dependencies]
 slint-build = "1.0"
